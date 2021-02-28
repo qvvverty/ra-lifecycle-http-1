@@ -9,7 +9,7 @@ export default class Clock extends Component {
 
   setClockHands() {
     const now = new Date();
-    const hours = now.getHours() > 12 ? now.getHours() - 12 : now.getHours();
+    const hours = now.getUTCHours() > 12 ? now.getUTCHours() - 12 : now.getUTCHours();
     const newState = {
       hour: -90 + (hours + this.props.hourShift) * 30 + 0.5 * now.getMinutes(),
       minute: -90 + now.getMinutes() * 6 + 0.1 * now.getSeconds(),

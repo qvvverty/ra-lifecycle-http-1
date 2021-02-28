@@ -5,7 +5,10 @@ import ClockForm from './ClockForm';
 
 export default class WorldTime extends Component {
   state = {
-    clocks: [{ city: 'Москва', hourShift: 0, id: nanoid(5) }]
+    clocks: [
+      { city: 'Лондон', hourShift: 0, id: nanoid(5) },
+      { city: 'Москва', hourShift: 3, id: nanoid(5) }
+    ]
   };
 
   addClock(newClock) {
